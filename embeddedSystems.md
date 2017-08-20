@@ -1,7 +1,7 @@
-#Embedded Systems 
-##Lecture 1
+# Embedded Systems 
+## Lecture 1
 
-###Microprocessors 
+### Microprocessors 
 - Are composed of three main units : Reg, ALU, CU
 
 #### RISC: Reduced Instruction Set Computer :
@@ -16,7 +16,7 @@ Less code, hard to design but easiest for progammer
 #### Memory Hierachy 
 - Memory is oraginised into 8 bit elements. 
 
-####Memory 
+#### Memory 
 - LOAD - STORE:
 - Direct manipulation of data is memory is not allowed.
  - Need to load into current reg and then store back into memory 
@@ -25,7 +25,7 @@ Less code, hard to design but easiest for progammer
  - Byte = 8 bits
  - Half word is 16 bits 
  - Word is 32 bits or 4 bytes 
- ###PROCESSOR MODES
+ ### PROCESSOR MODES
  - Supervisor : Entered when a software interrupt is handled
  - fIQ : Enetered when a high priority interrupt is handled 
  - IRQ: Entered whena low priority is raised 
@@ -34,7 +34,7 @@ Less code, hard to design but easiest for progammer
  - System : Privleged mode using the same reg as user mode 
  - User : mod  under which most app or OS run 
 
- ###Registers 
+ ### Registers 
  - 37 Registers 
  - Each reg is 32 bits wide 
  -30 general prupose registers 
@@ -43,7 +43,7 @@ Less code, hard to design but easiest for progammer
  - Changing from supervisor to fiQ wold result in the lrgest change in reg 
 - PC and CPSR are avaiable in all modes
 
-####SPECIAL REG 
+#### SPECIAL REG 
 - PC holds a 32 bit address of the instruction being fetched and is incrementd by 4 each cycle
 - SP R13, hold address at the top of memory 
 - LR R14, holds the return address during the branching and subroutine calls 
@@ -55,18 +55,18 @@ Less code, hard to design but easiest for progammer
 - Decode instruction 
 - Execute data path 
 
-###CPSr & SPSR
+### CPSr & SPSR
 - N, Z C, V 
-###Vector table 
+### Vector table 
 
-###COMMANDS 
-####DATA PROCESSING 
+### COMMANDS 
+#### DATA PROCESSING 
 - MOV, ADD SUB
-####DATAT TRANSFER 
+#### DATA TRANSFER 
 - LDR, STR 
 #### CONTROL FLOW 
 - B, BL 
-####Special 
+#### Special 
 - MSR, MRS
 
 - Instructions are to be aligned to 4 byte boundaries 
@@ -81,16 +81,16 @@ Less code, hard to design but easiest for progammer
 - view mmeory contents
 - breakpoints & troubleshooting 
 
-###Code exaples 
-####Directives 
+### Code exaples 
+#### Directives 
  - Area : new assembly section created 
  - Code
  - Entry: entry point of a file 
  - Readonly 
  - End : end of source file
 
- ####All code must look like
+ #### All code must look like
  - label instruction ;comment 
 
-###Assembly examples
+### Assembly examples
 - Appending letter S to data processing instruction forces the condition code flags (N,Z,C,V) to be saved into CPSR.
